@@ -59,7 +59,6 @@
 #ifndef RLIMIT_STACK
 # define RLIMIT_STACK -1
 #endif
-	
 
 ;
 #pragma GCC diagnostic push
@@ -72,27 +71,15 @@
 
 int main(void)
 {
-	struct rlimit	limits;
-	int table[] = {
-		[1] = RLIMIT_AS,
-		[2] = RLIMIT_CORE,
-		[3] = RLIMIT_CPU,
-		[4] = RLIMIT_DATA,
-		[5] = RLIMIT_FSIZE,
-		[6] = RLIMIT_MEMLOCK,
-		[7] = RLIMIT_MSGQUEUE,
-		[8] = RLIMIT_NICE,
-		[9] = RLIMIT_NOFILE,
-		[10] = RLIMIT_NPROC,
-		[11] = RLIMIT_RSS,
-		[12] = RLIMIT_RTPRIO,
-		[13] = RLIMIT_RTTIME,
-		[14] = RLIMIT_SIGPENDING,
-		[15] = RLIMIT_STACK};
-	int				pick;
+	struct rlimit limits;
+	int           table[] = {[1] = RLIMIT_AS,      [2] = RLIMIT_CORE,        [3] = RLIMIT_CPU,      [4] = RLIMIT_DATA,
+							 [5] = RLIMIT_FSIZE,   [6] = RLIMIT_MEMLOCK,     [7] = RLIMIT_MSGQUEUE, [8] = RLIMIT_NICE,
+							 [9] = RLIMIT_NOFILE,  [10] = RLIMIT_NPROC,      [11] = RLIMIT_RSS,     [12] = RLIMIT_RTPRIO,
+							 [13] = RLIMIT_RTTIME, [14] = RLIMIT_SIGPENDING, [15] = RLIMIT_STACK};
+	int           pick;
 
 	printf("Please input the number associated whit the resource whose limits you want to check\n"
-			"(the descriptions of the meanings of the limits are only acurate for linux):\n"
+		   "(the descriptions of the meanings of the limits are only acurate for linux):\n"
 		   "\t1 RLIMIT_AS The maximum size, in bytes, of the process's virtual memory (address space).\n"
 		   "\t2 RLIMIT_CORE The  maximum size of a core file (see core(5)) in bytes that the process may dump.\n"
 		   "\t3 RLIMIT_CPU In seconds, on the amount of CPU time that the  process  can  consume.\n"
@@ -113,7 +100,7 @@ int main(void)
 		   "\t14 RLIMIT_SIGPENDING This is a limit on the number of signals that may be queued.\n"
 		   "\t15 RLIMIT_STACK The maximum size of the process stack, in bytes.\n"
 		   "\npick: ");
-	scanf("%d",&pick);
+	scanf("%d", &pick);
 
 	if (pick < 1 || pick > 15)
 	{
