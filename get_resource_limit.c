@@ -83,7 +83,7 @@ int main(void)
 		   "\t1 RLIMIT_AS The maximum size, in bytes, of the process's virtual memory (address space).\n"
 		   "\t2 RLIMIT_CORE The  maximum size of a core file (see core(5)) in bytes that the process may dump.\n"
 		   "\t3 RLIMIT_CPU In seconds, on the amount of CPU time that the  process  can  consume.\n"
-		   "\t4 RLIMIT_DATA The process's data segment.\n"
+		   "\t4 RLIMIT_DATA The limit in the process's data segment.\n"
 		   "\t5 RLIMIT_FSIZE The maximum size in bytes of files that the process may create.\n"
 		   "\t6 RLIMIT_MEMLOCK The maximum number of bytes of memory that may be locked into RAM.\n"
 		   "\t7 RLIMIT_MSGQUEUE The number of bytes that can be allocated for POSIX message queues\n"
