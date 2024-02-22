@@ -79,7 +79,7 @@ int main(void)
 	int           pick;
 
 	printf("Please input the number associated whit the resource whose limits you want to check\n"
-		   "(the descriptions of the meanings of the limits are only acurate for linux):\n"
+		   "(the descriptions of the meanings of the limits are only acurate in linux):\n"
 		   "\t1 RLIMIT_AS The maximum size, in bytes, of the process's virtual memory (address space).\n"
 		   "\t2 RLIMIT_CORE The  maximum size of a core file (see core(5)) in bytes that the process may dump.\n"
 		   "\t3 RLIMIT_CPU In seconds, on the amount of CPU time that the  process  can  consume.\n"
